@@ -1,0 +1,50 @@
+<div class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+      <a href="javascript:void(0)" routerLink="/home"><img  style="height: 75px;" src="assets/images/logo-new.png" alt="Embark Driving School, Driving school in West Ryde, Driving School Sydney, West Ryde Driving School" /></a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">Sign in to start your session</p>
+
+    <form action="" method="post">
+      <div class="form-group has-feedback">
+        <input type="email" name="email" [(ngModel)]="loginCredential.email" #email="ngModel" class="form-control" placeholder="Email">
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" name="password" [(ngModel)]="loginCredential.password" #password="ngModel"  class="form-control" placeholder="Password">
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="checkbox icheck">
+            <label>
+              <input type="checkbox" name="rememberMe" [(ngModel)]="loginCredential.rememberMe" #rememberMe="ngModel"  > Remember Me
+            </label>
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button type="button" (click)="login()" class="btn btn-primary btn-block btn-flat">Sign In</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+
+
+    <a href="javascript:void(0)" class="hidden">I forgot my password</a><br>
+
+  </div>
+  <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+</div>
+<ngx-spinner
+bdOpacity = 0.9
+bdColor = "#ffffff"
+size = "medium"
+color = "#f20000"
+type = "ball-scale-ripple"
+[fullScreen] = "true"
+>
+<img src="assets/images/logo-new.png" style="width: 130px;">
+</ngx-spinner>

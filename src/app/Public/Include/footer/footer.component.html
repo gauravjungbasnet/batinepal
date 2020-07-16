@@ -1,0 +1,90 @@
+<footer>
+    <div class="foot-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                        <div style="width: 100%;    padding-top: 19px;"><iframe width="100%" height="250" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=27.667489, 85.415518&amp;q=MC88%2BX6%20Suryabinayak%2C%20Nepal+(Bati%20)&amp;ie=UTF8&amp;t=&amp;z=19&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Draw map route</a></iframe></div><br />
+                </div>
+  
+                <div class="col-md-2">
+                    <div class="useful-links">
+                        <h4> Useful Links</h4>
+                        <ul class="nav-list">
+                            <li><a href="javascript:void(0)" routerLink="">Home</a></li>
+                            <li><a href="javascript:void(0)" routerLink="/about-us">About Us</a></li>
+                            <li><a href="javascript:void(0)" routerLink="/our-team">OurTeam</a></li>
+                            <li><a href="javascript:void(0)" routerLink="/category">Products</a></li>
+                            <li><a href="javascript:void(0)" routerLink="/our-service">OurService</a></li>
+                            <li><a href="javascript:void(0)" routerLink="/testimonials">Testimonials</a></li>
+                            <li><a href="javascript:void(0)" routerLink="/contact-us">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="useful-links">
+                        <h4>We are open</h4>
+                        <ul class="nav-list">
+                            <li><a href="javascript:void(0)" (click)="checkStatus()">Sun: {{fsObj.open_and_close}}</a></li>
+                            <li><a href="javascript:void(0)" (click)="checkStatus()">Mon: {{fsObj.open_and_close}}</a></li>
+                            <li><a href="javascript:void(0)" (click)="checkStatus()">Tue: {{fsObj.open_and_close}}</a></li>
+                            <li><a href="javascript:void(0)" (click)="checkStatus()">Wed: {{fsObj.open_and_close}}</a></li>
+                            <li><a href="javascript:void(0)" (click)="checkStatus()">Thu: {{fsObj.open_and_close}}</a></li>
+                            <li><a href="javascript:void(0)" (click)="checkStatus()">Fri: {{fsObj.open_and_close}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+  
+                <div class="col-md-4">
+                    <h4>Contact Information</h4>
+                    <div class="row">
+                        <div class="col-md-2"><i class="	glyphicon glyphicon-earphone"></i></div>
+  
+                        <div class="col-md-10">
+                            <p>{{fsObj.phone1}}<br>
+                                {{fsObj.phone2}}<br>
+                                {{fsObj.phone3}}</p>
+                        </div>
+                    </div>
+  
+                    <div class="row" *ngIf="fsObj.email1">
+                        <div class="col-md-2"><i class="glyphicon glyphicon-envelope"></i></div>
+  
+                        <div class="col-md-10"><a href="mailto:{{fsObj.email1}}">{{fsObj.email1}}</a></div>
+                    </div>
+  
+                    <div class="row" *ngIf="fsObj.email2">
+                            <div class="col-md-2"><i class="glyphicon glyphicon-envelope"></i></div>
+      
+                            <div class="col-md-10"><a href="mailto:{{fsObj.email2}}">{{fsObj.email2}}</a></div>
+                        </div>
+                        <div class="row" *ngIf="fsObj.email3">
+                                <div class="col-md-2"><i class="glyphicon glyphicon-envelope"></i></div>
+          
+                                <div class="col-md-10"><a href="mailto:{{fsObj.email3}}">{{fsObj.email3}}</a></div>
+                            </div>
+  
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="follow">
+                                <h4>Follow Us</h4>
+                                <ul>
+                                    <li><a href="{{fsObj.facebook}}" target="_blank"><img src="assets/images/fb.png" alt="twitter"></a> </li>
+                                    <li><a href="{{fsObj.twitter}}" target="_blank"><img src="assets/images/tweet.png" alt="twitter"></a> </li>
+                                    <li><a href="{{fsObj.instagram}}" target="_blank"><img src="assets/images/instagram.png" alt="linkedin"></a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="row copy">
+                <div class="col-md-6">
+                    Copyright © {{currentYear}} Bindabasini Tapes Insustries. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  </footer>

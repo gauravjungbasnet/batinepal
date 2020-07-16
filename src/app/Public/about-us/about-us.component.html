@@ -1,0 +1,29 @@
+<app-header navId="about-us"></app-header>
+<!-- about us -->
+
+<div class="container">
+    <div class="bot-content">
+  
+      <div class="page-header">
+        <h1 style="text-align: center;font-style: oblique;color: #d5242b;">About Us</h1>
+      </div>
+      <div class="content-bg1">
+        <h3></h3>
+        <h1>{{auObj.title}}</h1>
+        <p style="text-align: justify;" innerHTML={{auObj.description}}></p>
+        <h2><strong><span style="font-size:14px;">{{auObj.company_name}} </span></strong></h2>
+      </div>
+  
+    </div>
+  </div>
+<app-footer></app-footer>
+<ngx-spinner
+bdOpacity = 0.9
+bdColor = "#ffffff"
+size = "medium"
+color = "#f20000"
+type = "ball-scale-ripple"
+[fullScreen] = "true"
+>
+<img src="assets/images/logo-new.png" style="width: 130px;">
+</ngx-spinner>

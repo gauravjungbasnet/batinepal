@@ -1,0 +1,189 @@
+<app-header navId="home"></app-header>
+<app-banner></app-banner>
+
+<!-- about us -->
+
+<div class="container">
+  <div class="bot-content">
+
+    <div class="page-header">
+      <h1 style="text-align: left;font-style: oblique;color: #d5242b;">About Us</h1>
+    </div>
+    <div class="content-bg1">
+      <h3></h3>
+      <h1>{{aboutUsObj.title}}</h1>
+      <p style="text-align: justify;" innerHTML="{{aboutUsObj.description}}">
+      </p>
+      <h2><strong><span style="font-size:14px;">{{aboutUsObj.company_name}} </span></strong></h2>
+    </div>
+
+  </div>
+</div>
+
+  <!-- our services -->
+
+  <div class="container">
+      <div class="page-header">
+        <h1 style="text-align: center;font-style: oblique;color: #d5242b;">Our Services</h1>
+      </div>
+      <div class="row" *ngIf="ourServiceList.length > 0">
+        <div class="swiper-container" [swiper]="configc" [(index)]="indexc">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide col col-md-4" *ngFor="let data of ourServiceList">
+              <div class="content-bg1">
+                  <h3 class="text-bold">{{data.title}}</h3>
+                  <p class="text-italic">{{data.description}}
+                      <span class="pull-right"><strong>- {{data.author}}</strong></span></p><br>
+                  <a href="javascript:void(0)" routerLink="/testimonials" class="pull-right" style="color: #d5242b">Read More »</a><div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+          <!--      
+          <div class="swiper-scrollbar"></div>
+          <div class="swiper-pagination"></div> -->
+    
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+
+<!-- our products -->
+
+<div class="container">
+  <div class="page-header">
+    <h1 style="text-align: center;font-style: oblique;color: #d5242b;">Our Products</h1>
+  </div>
+  <div class="row" *ngIf="categoryList.length > 0">
+    <div class="swiper-container" [swiper]="config" [(index)]="index">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let i of categoryList">
+          <div class="panel">
+            <div class="panel-body">
+              <div class="job-gird-container">
+                <div class="job-item job-grid bg-white shadow no-child-transition">
+                  <div class="panel-heading">
+                    <a class="title_link">
+                      <h3 class="jo-cap text-center">
+                        <strong style="color: #d5242b;">{{i.name}}</strong>
+                      </h3>
+                    </a>
+                  </div>
+
+                  <div class="panel-body">
+                    <div class="row">
+                      <img style="width: 300px; height:200px; border-radius: 8px; "
+                        src="{{mainURL}}/{{i.imagePath}}" />
+                    </div>
+                  </div>
+                  <div class="panel-footer">
+                    <a class="btn btn-second" routerLink="/product/{{i.id}}">View Product</a>
+                  </div>
+
+                  <br />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--      
+      <div class="swiper-scrollbar"></div>
+      <div class="swiper-pagination"></div> -->
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</div>
+
+<!-- what our client says -->
+
+<div class="container">
+      <div class="page-header">
+        <h1 style="text-align: right;font-style: oblique;color: #d5242b;">What our client says?</h1>
+      </div>
+      <div class="row" *ngIf="testimonialList.length > 0">
+          <div class="swiper-container" [swiper]="configb" [(index)]="indexb">
+            <div class="swiper-wrapper" style="height: auto;min-height: 100%;">
+              <div class="swiper-slide col col-md-4" *ngFor="let data of testimonialList">
+                <div class="content-bg1">
+                    <h3 class="text-bold">{{data.title}}</h3>
+                    <p class="text-italic">{{data.description}}
+                        <span class="pull-right"><strong>- {{data.client_name}}</strong></span></p><br>
+                    <a href="javascript:void(0)" routerLink="/testimonials" class="pull-right" style="color: #d5242b">Read More »</a><div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+            <!--      
+            <div class="swiper-scrollbar"></div>
+            <div class="swiper-pagination"></div> -->
+      
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+  </div>
+  <!-- our products -->
+<div class="container">
+    <div class="page-header">
+      <h1 style="text-align: center;font-style: oblique;color: #d5242b;">Our Team</h1>
+    </div>
+    <div class="row" *ngIf="ourTeamList.length > 0">
+      <div class="swiper-container" [swiper]="config" [(index)]="indexd">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" *ngFor="let i of ourTeamList">
+            <div class="panel">
+              <div class="panel-body">
+                <div class="job-gird-container">
+                  <div class="job-item job-grid bg-white shadow no-child-transition">
+                    <div class="panel-heading">
+                      <a class="title_link">
+                        <h3 class="jo-cap text-center">
+                          <strong style="color: #d5242b;">{{i.title}}</strong>
+                        </h3>
+                      </a>
+                    </div>
+  
+                    <div class="panel-body">
+                      <div class="row">
+                        <img style="width: 300px; height:179px; border-radius: 8px; "s
+                          src="{{mainURL}}/{{i.imagePath}}" />
+                      </div>
+                    </div>
+                    <div class="panel-footer">
+                      <!-- <h4>{{i.designation}}</h4> -->
+                      <p>{{i.designation}}</p>
+                    </div>
+  
+                    <br />
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--      
+        <div class="swiper-scrollbar"></div>
+        <div class="swiper-pagination"></div> -->
+  
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+
+
+<app-footer></app-footer>
+<ngx-spinner
+bdOpacity = 0.9
+bdColor = "#ffffff"
+size = "medium"
+color = "#f20000"
+type = "ball-scale-ripple"
+[fullScreen] = "true"
+>
+<img src="assets/images/logo-new.png" style="width: 130px;">
+</ngx-spinner>

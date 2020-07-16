@@ -1,0 +1,14 @@
+.ng-invalid.ng-touched{
+    border-color: #dd4b39;
+}
+
+.ng-valid.ng-touched{
+    border-color: green;
+}
+.content h3 {
+    color: #000000;
+    font-size: 22px;
+    font-family: 'Lora', serif;
+    border-bottom: 1px dotted #b1b2b3;
+    padding: 0 10px;
+}

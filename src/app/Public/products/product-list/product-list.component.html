@@ -1,0 +1,91 @@
+<app-header></app-header>
+<div class="container" *ngIf="showProduct == true">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let data of productList">
+        <div class="panel">
+            <div class="panel-body">
+              <div class="job-gird-container">
+                <div class="job-item job-grid bg-white shadow no-child-transition">
+                  <div class="panel-heading">
+                    <a class="title_link">
+                      <h3 class="jo-cap text-center">
+                        <strong style="color: #d5242b;">{{data.title}}</strong>
+                      </h3>
+                    </a>
+                  </div>
+      
+                  <div class="panel-body">
+                    <div class="row">
+                      <img style="width: 300px; height:179px;    margin-left: 9px; border-radius: 8px; " src="{{mainURL}}/{{data.imagePath}}" />
+                    </div>
+                  </div>
+                  <div class="panel-footer">
+                      <a class="btn btn-second" (click)="viewDetails(data)">View Details</a>
+                    </div>
+      
+                  <br />
+                </div>
+              </div>
+      
+            </div>
+          </div>
+    </div>
+   
+  </div>
+</div>
+<div class="container alert" *ngIf="showProduct == false">
+No item found
+</div>
+<div class="container alert" *ngIf="showProduct == null">
+  loading...
+  </div>
+  <ngx-smart-modal class=".nsm-dialog-animation-ltr" #myModal identifier="myModal">
+    <h1 class="jo-cap text-center">{{productDetails.title}}</h1>
+    <div class="panel-body">
+      <div class="row"  *ngIf="productDetails.imagePath">
+        <img class="center" style="width: 300px; height:179px; border-radius: 8px; " src="{{mainURL}}/{{productDetails.imagePath}}" />
+      </div>
+    </div>
+<div class="row">
+    <div class="col-md-1">
+      </div>
+  <div class="col-md-5">
+    <label for="" style="font-weight: bold;">Material : </label> {{productDetails.material}}
+  </div> 
+  <div class="col-md-6">
+    <label for="" style="font-weight: bold;">Core : </label> {{productDetails.core}}
+  </div>
+</div> 
+<div class="row">
+    <div class="col-md-1">
+      </div>
+  <div class="col-md-5">
+    <label for="" style="font-weight: bold;">Thickness : </label> {{productDetails.thickness}}
+  </div> 
+  <div class="col-md-6">
+    <label for="" style="font-weight: bold;">Popular Width : </label> {{productDetails.popular_width}}
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-1">
+      </div>
+  <div class="col-md-5">
+    <label for="" style="font-weight: bold;">Popular Length : </label> {{productDetails.popular_length}}
+  </div> 
+  <div class="col-md-6">
+    <label for="" style="font-weight: bold;">Color : </label> {{productDetails.color}}
+  </div>
+</div>    
+<div class="row">
+    <div class="col-md-1">
+      </div>
+  <div class="col-md-5">
+    <label for="" style="font-weight: bold;">Roll Size : </label> {{productDetails.roll_size}}
+  </div> 
+  <div class="col-md-6">
+    <label for="" style="font-weight: bold;">Supply Capacity : </label> {{productDetails.supply_capacity}}
+  </div>
+</div> 
+    <a class="btn btn-second" style="    margin-left: 151px;" (click)="myModal.close()">Close</a>
+  </ngx-smart-modal>
+<app-footer></app-footer>

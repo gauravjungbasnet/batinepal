@@ -1,0 +1,46 @@
+<app-header navId="products"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let data of categoryList">
+        <div class="panel">
+            <div class="panel-body">
+              <div class="job-gird-container">
+                <div class="job-item job-grid bg-white shadow no-child-transition">
+                  <div class="panel-heading">
+                    <a class="title_link">
+                      <h3 class="jo-cap text-center">
+                        <strong style="color: #d5242b;">{{data.name}}</strong>
+                      </h3>
+                    </a>
+                  </div>
+      
+                  <div class="panel-body">
+                    <div class="row">
+                      <img style="width: 300px; height:179px;    margin-left: 9px; border-radius: 8px; " src="{{mainURL}}/{{data.imagePath}}" />
+                    </div>
+                  </div>
+                  <div class="panel-footer">
+                      <a class="btn btn-second" routerLink="/product/{{data.id}}">View Product</a>
+                    </div>
+      
+                  <br />
+                </div>
+              </div>
+      
+            </div>
+          </div>
+    </div>
+   
+  </div>
+</div>
+<app-footer></app-footer>
+<ngx-spinner
+bdOpacity = 0.9
+bdColor = "#ffffff"
+size = "medium"
+color = "#f20000"
+type = "ball-scale-ripple"
+[fullScreen] = "true"
+>
+<img src="assets/images/logo-new.png" style="width: 130px;">
+</ngx-spinner>

@@ -1,0 +1,11 @@
+.login-page, .register-page {
+    height: auto;
+    background: #ffffff;
+}
+
+.login-box-body, .register-box-body {
+    background: #d4232b;
+    padding: 20px;
+    border-top: 0;
+    color: #666;
+}

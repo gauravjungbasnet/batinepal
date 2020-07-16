@@ -1,0 +1,49 @@
+<header class="navbar navbar-inverse">
+  <div class="border-top">
+      <div class="container">
+
+          <div class="row">
+              <div class="col-md-3">
+                  <div class="navbar-header">
+                      <div class="logo ">
+                          <a href="javascript:void(0)" routerLink="/home"><img  style="height: 75px;" src="assets/images/logo-new.png" alt="Embark Driving School, Driving school in West Ryde, Driving School Sydney, West Ryde Driving School" /></a>
+                      </div>
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                  </div>
+              </div>
+              <div class="col-md-9" *ngIf="headerList.length > 0">
+                      <ul class="pull-right">
+                      <li  *ngFor="let data of headerList" class="text-center">{{data.name}} {{data.value}}</li>
+
+                      </ul>
+                      <div class="clearfix"></div>
+              </div>
+          </div>
+         
+          <nav class="navbar navbar-default custom-nav">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" style="background-color: #d5242b;" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                                <li [class.active]="navId == 'home'" ><a href="javascript:void(0)" routerLink="/home">Home</a></li>
+                                <li [class.active]="navId == 'about-us'"><a href="javascript:void(0)" routerLink="/about-us">About Us</a></li>
+                                <li [class.active]="navId == 'our-team'"><a href="javascript:void(0)" routerLink="/our-team">Our Team</a></li>
+                                <li [class.active]="navId == 'products'"><a href="javascript:void(0)" routerLink="/category">Products</a></li>
+                                <li [class.active]="navId == 'our-service'"><a href="javascript:void(0)" routerLink="/our-service">Our Service</a></li>
+                                <li [class.active]="navId == 'testimonials'"><a href="javascript:void(0)" routerLink="/testimonials">Testimonials</a></li>
+                                <li [class.active]="navId == 'contact-us'"><a href="javascript:void(0)" routerLink="/contact-us">Contact Us</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+      </div>
+  </div>
+
+</header>

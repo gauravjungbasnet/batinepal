@@ -1,0 +1,40 @@
+<app-header navId="our-service"></app-header>
+<div class="container">
+  <div class="bot-content">
+    <div style="color: #d5242b;">
+      <h3>Our <b>Service</b></h3>
+    </div>
+    <div class="row">
+        <div class="col-md-12" *ngFor="let data of osObject">
+            <div class="bot-border">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="service-image">
+                            <h4><img style="height: 170px;width: 270px;"  class="img-thumbnail" alt="test" src="{{mainURL}}/{{data.imagePath}}"></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                      
+                        <div class="service-content">
+                            <h4>{{data.title}}</h4>
+                            <p style="text-align: justify;" innerHTML="{{data.description}}"></p>
+                            <h5>- {{data.author}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+<ngx-spinner
+bdOpacity = 0.9
+bdColor = "#ffffff"
+size = "medium"
+color = "#f20000"
+type = "ball-scale-ripple"
+[fullScreen] = "true"
+>
+<img src="assets/images/logo-new.png" style="width: 130px;">
+</ngx-spinner>

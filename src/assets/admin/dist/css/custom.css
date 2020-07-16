@@ -1,0 +1,44 @@
+.intl-tel-input .selected-flag {
+    z-index: 999 !important;    
+}
+.intl-tel-input {
+    width: 100%;
+}
+.bg-pattern {
+    background-image: url('http://subtlepatterns.com/patterns/kindajean.png');
+    padding: 5px;
+}
+.btn-fix {
+    height: 34px !important;
+    margin-top: -5px;
+}
+.fleet{
+    margin-top: 10px;    
+    cursor: pointer;
+}
+.fleet h3 {
+    margin: 0; 
+}
+.fleet input[type=radio]{
+    display: none;
+    transition: .3s background ease-in-out;
+    cursor: pointer;
+}
+.fleet input[type=radio] + span{
+    transition: .3s background ease-in-out;
+    padding: 3px;
+    cursor: pointer;
+    display: block;
+    
+}
+.fleet input[type=radio]:checked + span small{
+    color: #fff;
+}    
+.fleet input[type=radio]:checked + span{    
+    background: #00C0EF;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    transition: .3s background ease-in-out;
+    border-radius: 4px;
+}

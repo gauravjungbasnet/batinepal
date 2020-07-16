@@ -1,0 +1,25 @@
+<div class="banner-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner">
+                        <carousel [noWrap]="noWrapSlides">
+                            <slide *ngFor="let slide of bannerList; let index=index">
+                                <img src="{{mainURL}}/{{slide.ImagePath}}" alt="image slide" style="display: block; width: 100%; height: 350px;">
+
+                                <div class="carousel-caption">
+                                        <h4>{{slide.ImageName}}</h4>
+                                        <p *ngIf="slide.Description != 'null'">{{slide.Description}}</p>
+                                      </div>
+                            </slide>
+                        </carousel>
+                                    </div>
+                <br />
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>

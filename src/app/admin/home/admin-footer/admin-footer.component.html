@@ -1,0 +1,65 @@
+<section class="content-header">
+    <h1>
+      Footer
+      <small>Dashboard</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="javascript:void(0)"><i class="fa fa-dashboard"></i> Admin</a></li>
+      <li><a href="javascript:void(0)">Footer</a></li>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+<section class="content container-fluid">
+
+    <form role="form" (ngSubmit)="f.form.valid && submitData()" #f="ngForm" novalidate>
+      <div class="box-body">
+        <div class="form-group  col-md-6">
+          <label for="">Phone 1</label>
+          <input type="text" class="form-control" name="phone1" [(ngModel)]="osObj.phone1"  #phone1="ngModel">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="">Phone 2</label>
+            <input type="text" class="form-control" name="phone2" [(ngModel)]="osObj.phone2"  #phone2="ngModel">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="">Phone 3</label>
+            <input type="text"  class="form-control" name="phone3" [(ngModel)]="osObj.phone3"  #phone3="ngModel">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="">Email 1</label>
+            <input type="text"  class="form-control" name="email1" [(ngModel)]="osObj.email1"  #email1="ngModel">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="">Email 2</label>
+            <input type="text"  class="form-control" name="email2" [(ngModel)]="osObj.email2"  #email2="ngModel">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="">Email 3</label>
+            <input type="text"  class="form-control" name="email3" [(ngModel)]="osObj.email3"  #email3="ngModel">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="">Facebook URL</label>
+            <input type="text"  class="form-control" name="facebook" [(ngModel)]="osObj.facebook"  #facebook="ngModel">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="">Instagram 3</label>
+            <input type="text"  class="form-control" name="instagram" [(ngModel)]="osObj.instagram"  #instagram="ngModel">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="">Twitter</label>
+            <input type="text"  class="form-control" name="twitter" [(ngModel)]="osObj.twitter"  #twitter="ngModel">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="">Open And Close</label>
+            <input type="text"  class="form-control" name="open_and_close" [(ngModel)]="osObj.open_and_close"  #open_and_close="ngModel">
+        </div>
+        
+      </div>
+      <div class="box-footer">
+        <button  class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+
+  
+  </section>

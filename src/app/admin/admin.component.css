@@ -1,0 +1,12 @@
+.content h3 {
+    color: #000000;
+    font-size: 22px;
+    font-family: 'Lora', serif;
+    border-bottom: 1px dotted #b1b2b3;
+    padding: 0 10px;
+}
+
+body {
+    line-height: 8px !important;
+}
+
